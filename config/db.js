@@ -4,7 +4,7 @@
 //     host: 'localhost',
 //     user: 'root',
 //     password: '',
-//     database: 'appdev'
+//     database: 'ecommerce'
 // });
 
 // db.connect((err) => {

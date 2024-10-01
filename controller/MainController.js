@@ -17,6 +17,10 @@ const main = {
     contact:(req, res)=>{
         res.render('contact');
 
+    },
+    cart:(req, res)=>{
+        res.render('addtocart');
+
     }
     // save:(req, res)=>{
     //     const data = req.body;
