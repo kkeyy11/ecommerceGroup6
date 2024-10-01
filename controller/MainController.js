@@ -1,4 +1,4 @@
-// const info = require('../models/commerce');
+const info = require('../models/commerce');
 
 
 const main = {
@@ -21,15 +21,15 @@ const main = {
     cart:(req, res)=>{
         res.render('addtocart');
 
-    }
-    // save:(req, res)=>{
-    //     const data = req.body;
-    //     info.save(data, (err)=>{
-    //         if (err) throw err;
-    //         res.redirect('./');
-    //     })
+    },
+    save:(req, res)=>{
+        const data = req.body;
+        info.save(data, (err)=>{
+            if (err) throw err;
+            res.redirect('./shop');
+        })
        
-    // }   
+    }   
 
 };
 

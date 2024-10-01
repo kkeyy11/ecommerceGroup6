@@ -1,9 +1,9 @@
-// const db = require('../config/db');
-// const information = { //table name
-//     save:(data, callback) =>{
-//         const query ="insert into information (lastname, firstname) values (?,?)";
-//         db.query(query,  [data.lastname, data.firstname], callback);
-//     }
+const db = require('../config/db');
+const cartitems = { //table name
+    save:(data, callback) =>{
+        const query ="insert into cartitems (method, location, sizes, comment) values (?,?,?,?)";
+        db.query(query,  [data.method, data.location, data.sizes, data.comment], callback);
+    }
 
-// };
-// module.exports = information;
+};
+module.exports = cartitems;

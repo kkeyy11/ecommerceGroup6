@@ -8,7 +8,7 @@ router.get('/shop', kmy.shop);
 router.get('/shopdetail', kmy.shopdetail);
 router.get('/contact', kmy.contact);
 router.get('/cart', kmy.cart);
-// router.post('/save', kmy.save);
+router.post('/save', kmy.save); //SA SHOP NA ITO
 
 
 module.exports = router;
