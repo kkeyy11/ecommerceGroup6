@@ -22,6 +22,10 @@ const main = {
         res.render('addtocart');
 
     },
+    cartpage:(req, res)=>{
+        res.render('cartpage');
+
+    },
     save:(req, res)=>{
         const data = req.body;
         info.save(data, (err)=>{
