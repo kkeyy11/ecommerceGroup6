@@ -19,6 +19,7 @@ const main = {
 
     },
     cart:(req, res)=>{
+     
         res.render('addtocart');
 
     },
@@ -33,7 +34,7 @@ const main = {
             res.redirect('./shop');
         })
        
-    }   
+    }  
 
 };
 
