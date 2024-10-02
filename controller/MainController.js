@@ -27,6 +27,14 @@ const main = {
         res.render('cartpage');
 
     },
+    login:(req, res)=>{
+        res.render('login');
+
+    },
+    register:(req, res)=>{
+        res.render('register');
+
+    },
     save:(req, res)=>{
         const data = req.body;
         info.save(data, (err)=>{
