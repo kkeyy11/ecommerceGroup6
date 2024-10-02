@@ -39,14 +39,26 @@ const main = {
         res.render('landing');  //landing ito
 
     },
-    save:(req, res)=>{
-        const data = req.body;
-        info.save(data, (err)=>{
-            if (err) throw err;
-            res.redirect('./shop');
-        })
+    inshop:(req, res)=>{
+        res.render('inshop');  //landing ito
+
+    },
+    inshopdetail:(req, res)=>{
+        res.render('inshopdetail');  //landing ito
+
+    },
+    incontact:(req, res)=>{
+        res.render('incontact');  //landing ito
+
+    }
+    // save:(req, res)=>{
+    //     const data = req.body;
+    //     info.save(data, (err)=>{
+    //         if (err) throw err;
+    //         res.redirect('./shop');
+    //     })
        
-    }  
+    // }  
 
 };
 

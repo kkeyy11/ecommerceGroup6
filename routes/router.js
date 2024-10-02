@@ -12,11 +12,14 @@ router.post('/register', userController.postRegister);
 router.get('/shop', kmy.shop);
 router.get('/shopdetail', kmy.shopdetail);
 router.get('/contact', kmy.contact);
-router.get('/cart', kmy.cart); 
-router.get('/cartpage', kmy.cartpage);
-router.get('/landing', kmy.landing); //landing page ito
 
-router.post('/save', kmy.save);
+
+router.get('/landing', kmy.landing); //landing page ito
+router.get('/inshop', kmy.inshop);
+router.get('/inshopdetail', kmy.inshopdetail);
+router.get('/incontact', kmy.incontact);
+
+
 
 
 module.exports = router;
