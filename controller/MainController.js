@@ -35,6 +35,10 @@ const main = {
         res.render('register');
 
     },
+    landing:(req, res)=>{
+        res.render('landing');  //landing ito
+
+    },
     save:(req, res)=>{
         const data = req.body;
         info.save(data, (err)=>{

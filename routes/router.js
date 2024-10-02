@@ -14,6 +14,9 @@ router.get('/shopdetail', kmy.shopdetail);
 router.get('/contact', kmy.contact);
 router.get('/cart', kmy.cart); 
 router.get('/cartpage', kmy.cartpage);
+router.get('/landing', kmy.landing); //landing page ito
+
 router.post('/save', kmy.save);
+
 
 module.exports = router;
