@@ -26,3 +26,16 @@ exports.postRegister = async (req, res) => {
     await User.create({ name, email, password: hashedPassword });
     res.redirect('/login');
 };
+
+
+exports.logout = (req, res) => {
+    // Destroy the session to log the user out
+    req.session.destroy((err) => {
+        if (err) {
+            console.log('Error destroying session:', err);
+            return res.redirect('/'); // In case of error, redirect to the homepage
+        }
+        res.redirect('/'); // After logout, redirect to login page
+    });
+};
+

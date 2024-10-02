@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { restrictLandingPageAccess } = require('../middleware/middleware'); //middleware
 const kmy = require('../controller/MainController');
 const userController = require('../controller/userController');
 
@@ -14,12 +15,17 @@ router.get('/shopdetail', kmy.shopdetail);
 router.get('/contact', kmy.contact);
 
 
-router.get('/landing', kmy.landing); //landing page ito
+//router.get('/landing', kmy.landing); //landing page ito
 router.get('/inshop', kmy.inshop);
 router.get('/inshopdetail', kmy.inshopdetail);
 router.get('/incontact', kmy.incontact);
 
+//restrict direct access
+router.get('/landing', restrictLandingPageAccess, kmy.landing);
 
+
+//logout
+router.get('/logout', userController.logout);
 
 
 module.exports = router;
