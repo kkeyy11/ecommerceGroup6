@@ -10,7 +10,7 @@ exports.postLogin = async (req, res) => {
     const user = await User.findOne({ where: { email } });
     if (user && await bcrypt.compare(password, user.password)) {
         req.session.user = user;
-        res.redirect('/dashboard'); // Redirect after login
+        res.redirect('/'); // Redirect after login
     } else {
         res.render('login', { error: 'Invalid email or password' });
     }
