@@ -1,17 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const kmy = require('../controller/MainController');
+const userController = require('../controller/userController');
 
-
+// Main routes
 router.get('/', kmy.index);
-router.get('/login', kmy.login);
-router.get('/register', kmy.register);
+router.get('/login', userController.getLogin); // Use userController for login
+router.post('/login', userController.postLogin);
+router.get('/register', userController.getRegister); // Use userController for register
+router.post('/register', userController.postRegister);
 router.get('/shop', kmy.shop);
 router.get('/shopdetail', kmy.shopdetail);
 router.get('/contact', kmy.contact);
-router.get('/cart', kmy.cart); //ito yung form para sa add to cart
-router.get('/cartpage', kmy.cartpage); //cart page dito nakalista yung mga nasa cart
-router.post('/save', kmy.save); //SA SHOP NA ITO
-
+router.get('/cart', kmy.cart); 
+router.get('/cartpage', kmy.cartpage);
+router.post('/save', kmy.save);
 
 module.exports = router;
