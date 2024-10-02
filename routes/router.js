@@ -24,8 +24,8 @@ router.get('/incontact', kmy.incontact);
 router.get('/landing', restrictLandingPageAccess, kmy.landing);
 
 
-//logout
-router.get('/logout', userController.logout);
+// //logout
+// router.get('/logout', userController.logout);
 
 
 module.exports = router;
