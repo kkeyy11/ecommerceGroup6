@@ -50,7 +50,16 @@ const main = {
     incontact:(req, res)=>{
         res.render('incontact');  //landing ito
 
+    },
+    shoppingcart:(req, res)=>{
+        res.render('shoppingcart');  //landing ito
+
+    },
+    checkout:(req, res)=>{
+        res.render('checkout');  //landing ito
+
     }
+
     // save:(req, res)=>{
     //     const data = req.body;
     //     info.save(data, (err)=>{

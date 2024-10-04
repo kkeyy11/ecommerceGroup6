@@ -19,6 +19,8 @@ router.get('/contact', kmy.contact);
 router.get('/inshop', kmy.inshop);
 router.get('/inshopdetail', kmy.inshopdetail);
 router.get('/incontact', kmy.incontact);
+router.get('/shoppingcart', kmy.shoppingcart);
+router.get('/checkout', kmy.checkout);
 
 //restrict direct access
 router.get('/landing', restrictLandingPageAccess, kmy.landing);
