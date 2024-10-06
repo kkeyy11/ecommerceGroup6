@@ -59,6 +59,28 @@ const main = {
         res.render('checkout');  //landing ito
 
     },
+    faq:(req, res)=>{
+        res.render('faq');  
+
+    },
+    help:(req, res)=>{
+        res.render('help');  
+    },
+    support:(req, res)=>{
+        res.render('support');  
+
+    },
+    infaq:(req, res)=>{
+        res.render('infaq');  
+
+    },
+    inhelp:(req, res)=>{
+        res.render('inhelp');  
+    },
+    insupport:(req, res)=>{
+        res.render('insupport');  
+
+    },
 
     save:(req, res)=>{
         const data = req.body;

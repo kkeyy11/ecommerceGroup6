@@ -29,5 +29,13 @@ router.get('/landing', restrictLandingPageAccess, kmy.landing);
 router.get('/cart', kmy.cart);
 router.post('/save', kmy.save);
 
+router.get('/faq', kmy.faq);
+router.get('/help', kmy.help);
+router.get('/support', kmy.support);
+
+router.get('/infaq', kmy.infaq);
+router.get('/inhelp', kmy.inhelp);
+router.get('/insupport', kmy.insupport);
+
 
 module.exports = router;
