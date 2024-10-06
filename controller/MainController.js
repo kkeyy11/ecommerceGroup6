@@ -20,7 +20,7 @@ const main = {
     },
     cart:(req, res)=>{
      
-        res.render('addtocart');
+        res.render('cart');
 
     },
     cartpage:(req, res)=>{
@@ -58,16 +58,16 @@ const main = {
     checkout:(req, res)=>{
         res.render('checkout');  //landing ito
 
-    }
+    },
 
-    // save:(req, res)=>{
-    //     const data = req.body;
-    //     info.save(data, (err)=>{
-    //         if (err) throw err;
-    //         res.redirect('./shop');
-    //     })
+    save:(req, res)=>{
+        const data = req.body;
+        info.save(data, (err)=>{
+            if (err) throw err;
+            res.redirect('./inshop');
+        })
        
-    // }  
+    }  
 
 };
 

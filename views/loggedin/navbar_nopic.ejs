@@ -15,7 +15,7 @@
                         <a href="/inshop" class="nav-item nav-link">Shop</a>
                         <a href="/inshopdetail" class="nav-item nav-link">Shop Detail</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="/shoppingcart" class="dropdown-item">Shopping Cart</a>
                                 <a href="/checkout" class="dropdown-item">Checkout</a>
@@ -23,14 +23,11 @@
                         </div>
                         <a href="/incontact" class="nav-item nav-link">Contact</a>
                     </div>
-                    <div class="navbar-nav ml-auto py-0"></div>
-                        <a href="/" class="nav-item nav-link">Log Out</a> 
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="/" class="nav-item nav-link">Log Out</a>
                     </div>
-                    
-                    
                 </div>
             </nav>
-            
         </div>
     </div>
 </div>
@@ -43,10 +40,35 @@
     // Get all navbar links
     const navLinks = document.querySelectorAll('.navbar-nav .nav-item');
 
-    // Loop through links and add 'active' to the link that matches the current path
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
+    // Get the Pages dropdown link and its items
+    const pagesDropdown = document.querySelector('.nav-item.dropdown .nav-link');
+    const dropdownItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
+
+    // Function to activate the correct link
+    function setActiveLink() {
+        let foundActive = false;
+
+        // Check if any dropdown item matches the current path
+        dropdownItems.forEach(item => {
+            if (item.getAttribute('href') === currentPath) {
+                item.classList.add('active');
+                foundActive = true;
+            }
+        });
+
+        // If a dropdown item is active, mark the parent Pages dropdown as active
+        if (foundActive) {
+            pagesDropdown.classList.add('active');
         }
-    });
+
+        // Otherwise, check other navbar links
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Call the function to activate the correct link
+    setActiveLink();
 </script>

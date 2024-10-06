@@ -26,8 +26,8 @@ router.get('/checkout', kmy.checkout);
 router.get('/landing', restrictLandingPageAccess, kmy.landing);
 
 
-// //logout
-// router.get('/logout', userController.logout);
+router.get('/cart', kmy.cart);
+router.post('/save', kmy.save);
 
 
 module.exports = router;
