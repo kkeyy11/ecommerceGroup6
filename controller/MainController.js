@@ -18,7 +18,7 @@ const main = {
         res.render('contact');
 
     },
-    cart:(req, res)=>{
+    addtocart:(req, res)=>{
         res.render('addtocart');
 
     }

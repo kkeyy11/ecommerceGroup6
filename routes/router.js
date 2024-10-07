@@ -7,7 +7,7 @@ router.get('/', kmy.index);
 router.get('/shop', kmy.shop);
 router.get('/shopdetail', kmy.shopdetail);
 router.get('/contact', kmy.contact);
-router.get('/cart', kmy.cart);
+router.get('/addtocart', kmy.addtocart);
 // router.post('/save', kmy.save);
 
 
